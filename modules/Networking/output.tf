@@ -9,3 +9,8 @@ output "ubuntu_ami_id" {
 output "ubuntu_ami_name" {
   value = data.aws_ami.ubuntu.name  # Outputs the AMI name
 }
+
+output "public_subnet_ids" {
+  value = [for subnet in aws_subnet.lms_public_subnet : subnet.id]
+}
+

@@ -23,7 +23,7 @@ module "Networking" {
   ami_name                          = var.ami_name
   instance_name                     = var.instance_name
   iam_instance_profile              = var.iam_instance_profile
-  subnet_ids                        = module.networking.private_subnet_ids       
+  # subnet_ids                        = module.Networking.public_subnet_ids
   http_target_group_name            = var.http_target_group_name
   https_target_group_name           = var.https_target_group_name
   load_balancer_type                = var.load_balancer_type
